@@ -1,0 +1,191 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+//mapa
+$color: (
+    body : #ffebcc,
+    pie : #debf76,
+);
+
+//mixin
+@mixin botonrec {
+    border: 5px;
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+
+.ext {
+    width: 300px;
+    display: flex;
+    justify-content: space-between;
+    padding-left: 15rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    gap: 10rem;
+}
+
+#body {
+    background-color: map-get($color, body);
+}
+
+nav {
+    background: linear-gradient(to right, #ffebcc, #debf76);
+
+    & li {
+
+        border-radius: 10px;
+        background-color: rgb(235, 205, 161)
+    }
+
+
+    & li a:hover {
+        background-color: #efc07a;
+        color: black;
+        border-radius: 10px;
+    }
+}
+
+.card {
+    align-items: center;
+    margin: auto;
+}
+
+
+.titulo {
+    font-family: sans-serif;
+    text-align: center;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    color: #efc07a;
+}
+
+.btnbody {
+    @include botonrec;
+    background-color: #debf76;
+}
+
+.productos {
+    align-items: center;
+    gap: 30px;
+
+    &.produBollo {
+        display: flex;
+        align-items: center;
+    }
+}
+
+.wp {
+    position: fixed;
+    bottom: 55px;
+    right: 0;
+}
+
+.footer {
+    background-color: map-get($color , pie);
+    width: 100%;
+    height: 50px;
+    position: end;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+
+    & a {
+        color: black;
+        align-items: center;
+    }
+}
+
+
+.nosotros {
+    margin: 30px;
+    text-align: center;
+}
+
+.contactanos {
+
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+
+    .contacto {
+        grid-column: 2/3;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 66px;
+
+        &.contacto__fb a {
+            text-decoration: none;
+            border: 10px;
+            border-radius: 10px;
+            background-color: #efc07a;
+            padding: 10px;
+            margin: 10px;
+        }
+
+        &.contacto__wp a {
+            text-decoration: none;
+            border: 10px;
+            border-radius: 10px;
+            background-color: #efc07a;
+            margin: 10px;
+            padding: 10px;
+            text-align: center;
+            align-items: center;
+        }
+
+        &.contacto__in a {
+            text-decoration: none;
+            border: 10px;
+            border-radius: 10px;
+            background-color: #efc07a;
+            padding: 10px;
+            margin: 10px;
+        }
+
+    }
+}
+
+.contacto__form {
+    grid-column: 3/4;
+    font-size: 20px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    border-radius: 5px;
+    border: 10px;
+    border-color: black;
+    background-color: #e4d3b8;
+    text-align: center;
+    padding: 1rem;
+
+    &.contacto_int {
+        margin-left: 30%;
+        margin: auto;
+        padding: auto;
+    }
+
+    &.enviar {
+        background-color: #efc07a;
+        color: black;
+        border: 10px;
+        margin: 10px;
+        padding: 10px;
+        border-radius: 5px;
+    }
+}
+
+.ubicacion__dir {
+    font-size: 2rem;
+    grid-column: 2/3;
+    text-decoration: none;
+    border: 10px;
+    border-radius: 10px;
+    background-color: #efc07a;
+    padding: 10px;
+    margin: 10px;
+    text-align: center;
+}
